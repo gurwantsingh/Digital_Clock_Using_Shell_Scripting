@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#to make a digital clock we need a timer
+#we will use the date command to get the current time
+date +%T
+
+#we will use a while loop to keep the clock running
+
+Red=$'\e[1;31m'
+Green=$'\e[1;32m'
+Blue=$'\e[1;34m'
+
+while true
+do
+     clear
+     echo $Blue $(date +%T)
+     sleep 1s
+done
+
+#to stop the clock we can use ctrl+c
